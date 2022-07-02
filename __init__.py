@@ -26,7 +26,7 @@ class GrocySkill(MycroftSkill):
                 self.speak_dialog('add.item', {'product': item.name})
                 item_match = True
         if item_match == False:
-            self.speak_dialog('item.not.found', {'product': product_name})
+            self.speak_dialog('item.not.found', {'product_name': product_name})
 
 def create_skill():
     return GrocySkill()
