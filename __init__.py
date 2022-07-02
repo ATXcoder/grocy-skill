@@ -17,6 +17,7 @@ class GrocySkill(MycroftSkill):
 
     @intent_file_handler('add.item.intent')
     def add_item(self, message):
+        self.log.info()
         product_name = message.data.get('product')
         items = self.grocy.all_products()
         for item in items:

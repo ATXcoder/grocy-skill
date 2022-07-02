@@ -12,6 +12,6 @@ skillMetadata:
           label: Grocy URL (without port)
           value: ""
         - name: grocy_port
-          type: text
+          type: number
           label: Grocy port
           value: ""
