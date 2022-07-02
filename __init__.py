@@ -17,13 +17,16 @@ class GrocySkill(MycroftSkill):
 
     @intent_file_handler('add.item.intent')
     def add_item(self, message):
+        item_match = False
         product_name = message.data.get('product')
         items = self.grocy.all_products()
         for item in items:
-            if item.name == product_name:
+            if item.name.lower() == product_name.lower():
                 self.grocy.add_product_to_shopping_list(item.id)
                 self.speak_dialog('add.item', {'product': item.name})
-
+                item_match = True
+        if item_match == False:
+            self.speak_dialog('item.not.found', {'product': product_name})
 
 def create_skill():
     return GrocySkill()
