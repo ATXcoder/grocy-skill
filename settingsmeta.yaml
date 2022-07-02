@@ -1,22 +1,17 @@
 
 skillMetadata:
   sections:
-    - name: Options << Name of section
+    - name: Grocy
       fields:
-        - name: internal_python_variable_name
+        - name: grocy_api_key
           type: text
-          label: Setting Friendly Display Name
+          label: Grocy API Key
           value: ""
-          placeholder: demo prompt in the input box
-    - name: Login << Name of another section
-      fields:
-        - type: label
-          label: Just a little bit of extra info for the user to understand following settings
-        - name: username
+        - name: grocy_url
           type: text
-          label: Username
+          label: Grocy URL (without port)
           value: ""
-        - name: password
-          type: password
-          label: Password
+        - name: grocy_port
+          type: text
+          label: Grocy port
           value: ""
