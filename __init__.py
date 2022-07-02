@@ -2,7 +2,7 @@ from mycroft import MycroftSkill, intent_file_handler
 from pygrocy import Grocy
 from pygrocy.data_models.generic import EntityType
 
-class Grocy(MycroftSkill):
+class GrocySkill(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
         self.grocy_api_key = self.settings.get('grocy_api_key')
@@ -25,5 +25,5 @@ class Grocy(MycroftSkill):
 
 
 def create_skill():
-    return Grocy()
+    return GrocySkill()
 
