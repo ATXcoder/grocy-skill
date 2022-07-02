@@ -8,7 +8,7 @@ class GrocySkill(MycroftSkill):
         self.grocy_api_key = self.settings.get('grocy_api_key')
         self.grocy_url = self.settings.get('grocy_url')
         self.grocy_port = self.settings.get('grocy_port')
-        self.grocy = Grocy(self.grocy_url, self.grocy_api_key, self.grocy_port)
+        self.grocy = Grocy(self.grocy_url, self.grocy_api_key, port=self.grocy_port)
 
 
     @intent_file_handler('grocy.intent')
