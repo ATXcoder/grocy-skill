@@ -21,6 +21,7 @@ class GrocySkill(MycroftSkill):
         items = self.grocy.all_products()
         for item in items:
             if item.name == product_name:
+                self.grocy.add_product_to_shopping_list(item.id)
                 self.speak_dialog('add.item', {'product': item.name})
 
 
